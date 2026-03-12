@@ -2,7 +2,7 @@ import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-lake-light">
+    <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container px-4">
         <div className="text-center mb-14">
           <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
@@ -40,12 +40,12 @@ const ContactSection = () => {
             <div className="w-12 h-12 rounded-full bg-pine-light flex items-center justify-center mx-auto mb-4">
               <Instagram className="w-5 h-5 text-secondary" />
             </div>
-            <h3 className="font-heading font-semibold text-foreground mb-1">Social</h3>
+            <h3 className="font-heading font-semibold text-foreground mb-1">Follow Us</h3>
             <div className="flex justify-center gap-4 mt-2">
-              <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://instagram.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://facebook.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-accent transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>

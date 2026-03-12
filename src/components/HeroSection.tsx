@@ -1,15 +1,13 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-paddling.jpg";
+import heroBg from "@/assets/paddling-lake.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Overlay */}
       <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
 
       <div className="relative z-10 container text-center px-4 py-32">
@@ -34,7 +32,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll hint */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-gentle-float">
         <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center pt-2">
           <div className="w-1.5 h-3 rounded-full bg-primary-foreground/50" />

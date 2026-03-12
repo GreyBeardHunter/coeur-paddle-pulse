@@ -1,35 +1,18 @@
-import aboutImg from "@/assets/about-canoe.jpg";
-import { Users, Waves, Mountain } from "lucide-react";
-
-const features = [
-  {
-    icon: Waves,
-    title: "Ancient Tradition",
-    description: "Outrigger canoeing originated in the Pacific Islands thousands of years ago. We carry that tradition to the inland waters of Idaho.",
-  },
-  {
-    icon: Users,
-    title: "Community First",
-    description: "Whether you're a seasoned paddler or touching a paddle for the first time, our crew welcomes everyone with open arms.",
-  },
-  {
-    icon: Mountain,
-    title: "Pacific Northwest",
-    description: "Paddle surrounded by the breathtaking beauty of Lake Coeur d'Alene, with mountain views and pristine water.",
-  },
-];
+import canoeBeach from "@/assets/canoe-beach.jpg";
+import crewLaunch from "@/assets/crew-launch.jpg";
+import { Heart, Target, Eye } from "lucide-react";
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 md:py-28 bg-background">
       <div className="container px-4">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Image */}
+        {/* Who We Are */}
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20 md:mb-28">
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-elevated">
               <img
-                src={aboutImg}
-                alt="Outrigger canoe bow on Lake Coeur d'Alene"
+                src={crewLaunch}
+                alt="CDA Outrigger crew launching canoe on Lake Coeur d'Alene"
                 className="w-full h-[400px] md:h-[500px] object-cover"
                 loading="lazy"
               />
@@ -38,31 +21,59 @@ const AboutSection = () => {
             <div className="absolute -top-4 -left-4 w-32 h-32 rounded-xl bg-lake-light -z-10" />
           </div>
 
-          {/* Content */}
           <div>
             <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-              About Our Club
+              Who We Are
             </p>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
               Paddling Together on <span className="text-primary">Lake Coeur d'Alene</span>
             </h2>
-            <p className="font-body text-muted-foreground text-lg leading-relaxed mb-8">
-              CDA Outrigger brings the spirit of Hawaiian outrigger canoeing to the heart of North Idaho. We're a welcoming community of paddlers who share a passion for the water, fitness, and the camaraderie that comes from moving a canoe together.
+            <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
+              CDA Outrigger is Coeur d'Alene's outrigger canoe club. We paddle OC-6 (Outrigger Canoe 6-person) on Lake Coeur d'Alene and coordinate paddling opportunities throughout the Pacific Northwest and beyond.
             </p>
-
-            <div className="space-y-6">
-              {features.map((feature) => (
-                <div key={feature.title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-lake-light flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-foreground mb-1">{feature.title}</h3>
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              We are a registered 501(c)(3) non-profit organization dedicated to promoting the sport of outrigger canoeing, building community, and connecting people with the water. Whether you're a seasoned ocean paddler or have never touched a paddle, you belong here.
+            </p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pine-light">
+              <Heart className="w-4 h-4 text-secondary" />
+              <span className="font-body text-sm font-medium text-secondary">501(c)(3) Non-Profit Organization</span>
             </div>
+          </div>
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="bg-lake-light rounded-2xl p-8 md:p-10">
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+              <Target className="w-7 h-7 text-primary" />
+            </div>
+            <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Mission</h3>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              To promote the sport of outrigger canoeing in the Inland Northwest, foster community through paddling, and make the ancient tradition of wa'a (canoe) accessible to everyone regardless of age, background, or ability.
+            </p>
+          </div>
+
+          <div className="bg-koa-light rounded-2xl p-8 md:p-10">
+            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+              <Eye className="w-7 h-7 text-accent" />
+            </div>
+            <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Vision</h3>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              To build a thriving outrigger community in North Idaho where paddlers of all levels can train, race, and share the deep cultural connection to the canoe — from Lake Coeur d'Alene to ocean races across the Pacific.
+            </p>
+          </div>
+        </div>
+
+        {/* Photo strip */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="rounded-xl overflow-hidden shadow-card">
+            <img src={canoeBeach} alt="Outrigger canoe with orange ama on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-card">
+            <img src={crewLaunch} alt="Crew preparing the canoe at the shore" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-card hidden md:block">
+            <img src={canoeBeach} alt="Canoe and equipment on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700 object-bottom" loading="lazy" />
           </div>
         </div>
       </div>
