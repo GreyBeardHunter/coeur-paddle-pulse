@@ -25,6 +25,7 @@ const Footer = () => {
             <a href="#schedule" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Schedule</a>
             <a href="#events" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Events</a>
             <a href="#join" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Membership</a>
+            <a href="/sponsorship" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Sponsorship</a>
             <a href="#contact" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Contact</a>
           </div>
 
