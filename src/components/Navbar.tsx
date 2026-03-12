@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Schedule", href: "#schedule" },
-  { label: "Join Us", href: "#join" },
+  { label: "Events", href: "#events" },
+  { label: "Membership", href: "#join" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -22,9 +23,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-card/95 backdrop-blur-md shadow-card"
-          : "bg-transparent"
+        scrolled ? "bg-card/95 backdrop-blur-md shadow-card" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
@@ -32,8 +31,7 @@ const Navbar = () => {
           CDA Outrigger
         </a>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -50,7 +48,6 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className={`md:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
@@ -60,7 +57,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-card/98 backdrop-blur-lg border-t border-border animate-fade-slide-up">
           <div className="container py-6 flex flex-col gap-4">
