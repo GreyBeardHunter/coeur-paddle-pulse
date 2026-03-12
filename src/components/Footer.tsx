@@ -1,4 +1,10 @@
-import { Instagram, Facebook, Heart } from "lucide-react";
+import { Instagram, Facebook, Youtube, Heart } from "lucide-react";
+
+const StravaIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -25,11 +31,17 @@ const Footer = () => {
           <div>
             <p className="font-heading font-semibold text-sm text-primary-foreground/80 mb-3">Follow Us</p>
             <div className="flex gap-3">
-              <a href="https://instagram.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.instagram.com/cda_outrigger_canoe_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.facebook.com/profile.php?id=61579139774315" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.youtube.com/@CDAOutrigger" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://www.strava.com/clubs/cdaoutriggercanoe" target="_blank" rel="noopener noreferrer" aria-label="Strava" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+                <StravaIcon />
               </a>
             </div>
           </div>

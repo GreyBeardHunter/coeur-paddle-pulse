@@ -49,7 +49,7 @@ const AboutSection = () => {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Mission</h3>
             <p className="font-body text-muted-foreground leading-relaxed">
-              To promote the sport of outrigger canoeing in the Inland Northwest, foster community through paddling, and make the ancient tradition of wa'a (canoe) accessible to everyone regardless of age, background, or ability.
+              The CDA Outrigger Canoe Club builds community, wellness, and connection to the water through the shared tradition of outrigger canoe paddling. Inspired by the Hawaiian waʻa and guided by the values of aloha, ʻohana, and kuleana, we welcome paddlers of all backgrounds to learn, paddle, and grow together while stewarding the waters of Lake Coeur d'Alene. Through inclusive programs, cultural respect, and community partnerships, we strive to make paddling accessible and meaningful for locals and visitors alike.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const AboutSection = () => {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Vision</h3>
             <p className="font-body text-muted-foreground leading-relaxed">
-              To build a thriving outrigger community in North Idaho where paddlers of all levels can train, race, and share the deep cultural connection to the canoe — from Lake Coeur d'Alene to ocean races across the Pacific.
+              Our vision is to cultivate a thriving waʻa community in North Idaho where outrigger paddling becomes a source of connection, cultural appreciation, and outdoor wellness. By expanding access to paddling experiences, developing future paddlers, and building the resources needed for long-term sustainability, we aim to establish Lake Coeur d'Alene as a welcoming home for the spirit of the canoe and a place where people gather in the spirit of aloha for generations to come.
             </p>
           </div>
         </div>

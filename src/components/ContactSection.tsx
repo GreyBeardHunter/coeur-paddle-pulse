@@ -1,4 +1,4 @@
-import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -41,12 +41,15 @@ const ContactSection = () => {
               <Instagram className="w-5 h-5 text-secondary" />
             </div>
             <h3 className="font-heading font-semibold text-foreground mb-1">Follow Us</h3>
-            <div className="flex justify-center gap-4 mt-2">
-              <a href="https://instagram.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
+            <div className="flex justify-center gap-3 mt-2">
+              <a href="https://www.instagram.com/cda_outrigger_canoe_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/cdaoutrigger" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61579139774315" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-accent transition-colors">
                 <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.youtube.com/@CDAOutrigger" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-accent transition-colors">
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>

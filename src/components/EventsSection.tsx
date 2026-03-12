@@ -96,7 +96,7 @@ const EventsSection = () => {
             Follow us on social media for the latest updates and event announcements.
           </p>
           <Button variant="outline" asChild>
-            <a href="https://www.strava.com/clubs/cda-outrigger" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.strava.com/clubs/cdaoutriggercanoe" target="_blank" rel="noopener noreferrer">
               View on Strava <ExternalLink className="w-4 h-4" />
             </a>
           </Button>
