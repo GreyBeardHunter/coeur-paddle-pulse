@@ -189,7 +189,6 @@ const PaddleCalendar = () => {
                     onClick={() => {
                       setSelectedDate(session.date);
                       setMonth(new Date(session.date.getFullYear(), session.date.getMonth(), 1));
-                      setRsvpSession(session);
                     }}
                     className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-muted/60 transition-colors text-left group"
                   >
