@@ -2,10 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { ArrowLeft, MapPin, Clock, Users } from "lucide-react";
-import { toast } from "sonner";
+import { ArrowLeft, MapPin, Clock, ExternalLink } from "lucide-react";
 
 interface PaddleSession {
   date: Date;
