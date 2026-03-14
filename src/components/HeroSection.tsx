@@ -15,9 +15,7 @@ const HeroSection = () => {
           Coeur d'Alene Outrigger Canoe Club
         </p>
         <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-7xl text-primary-foreground leading-tight text-balance mb-6 animate-fade-slide-up" style={{ animationDelay: "0.1s" }}>
-          From Lake to Ocean,
-          <br />
-          <span className="text-accent">All Are Welcome</span> to Paddle
+          Aloha & Welcome
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-slide-up" style={{ animationDelay: "0.2s" }}>
           Join Idaho's premier outrigger canoe club on the stunning waters of Lake Coeur d'Alene. No experience needed — just a love for the water.
