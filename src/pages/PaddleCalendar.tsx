@@ -63,28 +63,10 @@ const PaddleCalendar = () => {
 
   const handleDateSelect = (date: Date | undefined) => {
     setSelectedDate(date);
-    if (date) {
-      const session = paddleSessions.find((s) => isSameDay(s.date, date));
-      if (session) {
-        setRsvpSession(session);
-      }
-    }
   };
 
-  const handleRsvp = () => {
-    if (rsvpSession) {
-      setRsvpOpen(true);
-    }
-  };
-
-  const handleSubmitRsvp = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
-    toast.success(`You're signed up for ${rsvpSession?.label} on ${rsvpSession?.date.toLocaleDateString("en-US", { month: "long", day: "numeric" })}!`);
-    setRsvpOpen(false);
-    setName("");
-    setEmail("");
-  };
+  // Replace with your actual Google Form URL
+  const GOOGLE_FORM_URL = "#";
 
   // Get upcoming sessions for the sidebar list
   const upcomingSessions = paddleSessions
