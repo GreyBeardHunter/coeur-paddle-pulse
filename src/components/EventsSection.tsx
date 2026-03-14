@@ -3,6 +3,24 @@ import { Button } from "@/components/ui/button";
 
 const upcomingEvents = [
   {
+    date: "July 10, 2026",
+    time: "TBD",
+    title: "ARE Sprint Challenge",
+    type: "Race",
+    location: "Polson, MT",
+    description: "Exciting sprint race at Flathead Lake.",
+    link: "#",
+  },
+  {
+    date: "July 11, 2026",
+    time: "TBD",
+    title: "7th Annual Paddle Palooza",
+    type: "Race / Voyage",
+    location: "Flathead Lake, MT",
+    description: "25-mile iron option and 30-mile voyage.",
+    link: "#",
+  },
+  {
     date: "Every Friday",
     time: "5:00 PM",
     title: "Friday Night Paddle",
