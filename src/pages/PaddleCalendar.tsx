@@ -214,46 +214,6 @@ const PaddleCalendar = () => {
         </div>
       </div>
 
-      {/* RSVP Dialog */}
-      <Dialog open={rsvpOpen} onOpenChange={setRsvpOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="font-heading">RSVP — {rsvpSession?.label}</DialogTitle>
-            <DialogDescription className="font-body">
-              {rsvpSession?.date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })} at {rsvpSession?.time}
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleSubmitRsvp} className="space-y-4 mt-2">
-            <div>
-              <label className="font-body text-sm font-medium text-foreground block mb-1.5">Name</label>
-              <Input
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                maxLength={100}
-              />
-            </div>
-            <div>
-              <label className="font-body text-sm font-medium text-foreground block mb-1.5">Email</label>
-              <Input
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                maxLength={255}
-              />
-            </div>
-            <Button type="submit" variant="accent" className="w-full">
-              Confirm RSVP
-            </Button>
-            <p className="font-body text-xs text-muted-foreground text-center">
-              We'll send a reminder before the session.
-            </p>
-          </form>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
