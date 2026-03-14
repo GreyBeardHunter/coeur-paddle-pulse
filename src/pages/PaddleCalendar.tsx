@@ -57,10 +57,6 @@ function isSameDay(a: Date, b: Date) {
 const PaddleCalendar = () => {
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
-  const [rsvpOpen, setRsvpOpen] = useState(false);
-  const [rsvpSession, setRsvpSession] = useState<PaddleSession | null>(null);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [month, setMonth] = useState<Date>(new Date(2026, 4, 1));
 
   const selectedSession = selectedDate ? paddleSessions.find((s) => isSameDay(s.date, selectedDate)) : null;
