@@ -164,9 +164,11 @@ const PaddleCalendar = () => {
                     </span>
                   )}
                 </div>
-                <Button variant="accent" className="w-full" onClick={handleRsvp}>
-                  <Users className="w-4 h-4 mr-2" />
-                  RSVP for This Session
+                <Button variant="accent" className="w-full" asChild>
+                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Sign Up via Google Form
+                  </a>
                 </Button>
               </div>
             ) : (
