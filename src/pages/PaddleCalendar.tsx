@@ -2,10 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { ArrowLeft, MapPin, Clock, Users } from "lucide-react";
-import { toast } from "sonner";
+import { ArrowLeft, MapPin, Clock, ExternalLink } from "lucide-react";
 
 interface PaddleSession {
   date: Date;
@@ -60,38 +57,16 @@ function isSameDay(a: Date, b: Date) {
 const PaddleCalendar = () => {
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
-  const [rsvpOpen, setRsvpOpen] = useState(false);
-  const [rsvpSession, setRsvpSession] = useState<PaddleSession | null>(null);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [month, setMonth] = useState<Date>(new Date(2026, 4, 1));
 
   const selectedSession = selectedDate ? paddleSessions.find((s) => isSameDay(s.date, selectedDate)) : null;
 
   const handleDateSelect = (date: Date | undefined) => {
     setSelectedDate(date);
-    if (date) {
-      const session = paddleSessions.find((s) => isSameDay(s.date, date));
-      if (session) {
-        setRsvpSession(session);
-      }
-    }
   };
 
-  const handleRsvp = () => {
-    if (rsvpSession) {
-      setRsvpOpen(true);
-    }
-  };
-
-  const handleSubmitRsvp = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
-    toast.success(`You're signed up for ${rsvpSession?.label} on ${rsvpSession?.date.toLocaleDateString("en-US", { month: "long", day: "numeric" })}!`);
-    setRsvpOpen(false);
-    setName("");
-    setEmail("");
-  };
+  // Replace with your actual Google Form URL
+  const GOOGLE_FORM_URL = "#";
 
   // Get upcoming sessions for the sidebar list
   const upcomingSessions = paddleSessions
@@ -189,9 +164,11 @@ const PaddleCalendar = () => {
                     </span>
                   )}
                 </div>
-                <Button variant="accent" className="w-full" onClick={handleRsvp}>
-                  <Users className="w-4 h-4 mr-2" />
-                  RSVP for This Session
+                <Button variant="accent" className="w-full" asChild>
+                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Sign Up via Google Form
+                  </a>
                 </Button>
               </div>
             ) : (
@@ -212,7 +189,6 @@ const PaddleCalendar = () => {
                     onClick={() => {
                       setSelectedDate(session.date);
                       setMonth(new Date(session.date.getFullYear(), session.date.getMonth(), 1));
-                      setRsvpSession(session);
                     }}
                     className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-muted/60 transition-colors text-left group"
                   >
@@ -237,46 +213,6 @@ const PaddleCalendar = () => {
         </div>
       </div>
 
-      {/* RSVP Dialog */}
-      <Dialog open={rsvpOpen} onOpenChange={setRsvpOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="font-heading">RSVP — {rsvpSession?.label}</DialogTitle>
-            <DialogDescription className="font-body">
-              {rsvpSession?.date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })} at {rsvpSession?.time}
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleSubmitRsvp} className="space-y-4 mt-2">
-            <div>
-              <label className="font-body text-sm font-medium text-foreground block mb-1.5">Name</label>
-              <Input
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                maxLength={100}
-              />
-            </div>
-            <div>
-              <label className="font-body text-sm font-medium text-foreground block mb-1.5">Email</label>
-              <Input
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                maxLength={255}
-              />
-            </div>
-            <Button type="submit" variant="accent" className="w-full">
-              Confirm RSVP
-            </Button>
-            <p className="font-body text-xs text-muted-foreground text-center">
-              We'll send a reminder before the session.
-            </p>
-          </form>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
