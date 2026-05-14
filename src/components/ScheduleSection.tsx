@@ -1,10 +1,8 @@
 import { Clock, MapPin, Calendar } from "lucide-react";
 
 const scheduleData = [
-  { day: "Tuesday", time: "5:30 PM", type: "Practice", location: "Independence Point" },
-  { day: "Thursday", time: "5:30 PM", type: "Practice", location: "Independence Point" },
-  { day: "Saturday", time: "8:00 AM", type: "Long Paddle", location: "Independence Point" },
-  { day: "Sunday", time: "9:00 AM", type: "Open Paddle", location: "Independence Point" },
+  { day: "Friday", time: "4:30 PM", type: "Practice", location: "Independence Point" },
+  { day: "Sunday", time: "10:00 AM", type: "Open Paddle", location: "Independence Point" },
 ];
 
 const ScheduleSection = () => {
@@ -23,7 +21,7 @@ const ScheduleSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {scheduleData.map((item) => (
             <div
               key={item.day}
