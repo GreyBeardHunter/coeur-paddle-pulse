@@ -41,6 +41,19 @@ const membershipTiers = [
     ],
     featured: false,
   },
+  {
+    name: "Service Membership",
+    price: "Service",
+    period: "in lieu of dues",
+    description: "Individual — 15–20 volunteer hours / year",
+    benefits: [
+      "Full Individual membership benefits",
+      "Dues waived in exchange for service",
+      "Help with events, equipment, and outreach",
+      "Deepens kuleana to the club and ʻohana",
+    ],
+    featured: false,
+  },
 ];
 
 const JoinSection = () => {
