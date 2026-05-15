@@ -55,7 +55,7 @@ const JoinSection = () => {
             Your Seat in the Canoe is Waiting
           </h2>
           <p className="font-body text-muted-foreground text-lg max-w-2xl mx-auto">
-            Membership is open to everyone. No experience required — your first practice is always free. Come try it out before you commit!
+            Membership is open to everyone. No experience required — your <span className="font-semibold text-accent">first 3 paddles are free</span>. Come try us out before you commit.
           </p>
         </div>
 
