@@ -38,7 +38,7 @@ const ContactSection = () => {
               <MapPin className="w-5 h-5 text-primary" />
             </div>
             <h3 className="font-heading font-semibold text-foreground mb-1">Location</h3>
-            <p className="font-body text-sm text-muted-foreground">NIC Beach<br />Coeur d'Alene, Idaho</p>
+            <p className="font-body text-sm text-muted-foreground">NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts<br />Coeur d'Alene, Idaho</p>
           </a>
 
           <div className="bg-card rounded-xl p-6 text-center shadow-card">
