@@ -9,18 +9,23 @@ interface Announcement {
 }
 
 // Update this list each week to keep paddlers in the loop.
-const weekOf = "Week of May 17, 2026";
+const weekOf = "Week of June 23, 2026";
 
 const announcements: Announcement[] = [
   {
-    type: "cancellation",
-    title: "Friday Paddle Canceled",
-    body: "No Friday paddle this week. We'll see you Sunday on the water.",
+    type: "info",
+    title: "Friday Paddle",
+    body: "Open paddle at NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts. Meet at 5:00 PM. All paddlers welcome.",
+  },
+  {
+    type: "info",
+    title: "Sunday Paddle",
+    body: "Open paddle at NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts. Meet at 10:00 AM. Bring your ʻohana.",
   },
   {
     type: "event",
-    title: "Sunday Potluck BBQ After Paddle",
-    body: "Charcoal and tables are provided. Bring something to grill or a side to share — all paddlers and ʻohana welcome.",
+    title: "Fundraising Event at Doma Coffee",
+    body: "Saturday, June 27th at Doma Coffee. More details to come — stay tuned!",
   },
 ];
 
