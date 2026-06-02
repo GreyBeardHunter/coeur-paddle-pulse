@@ -8,8 +8,6 @@ interface Announcement {
   body: string;
 }
 
-// Update this list each week to keep paddlers in the loop.
-const weekOf = "Week of June 23, 2026";
 
 const announcements: Announcement[] = [
   {
@@ -69,10 +67,9 @@ const AnnouncementsSection = () => {
               This Week
             </p>
           </div>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground text-center mb-2">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground text-center mb-10">
             Announcements
           </h2>
-          <p className="font-body text-muted-foreground text-center mb-10">{weekOf}</p>
 
           <div className="grid sm:grid-cols-2 gap-5">
             {announcements.map((a, i) => {
